@@ -3,46 +3,311 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Payconnect</title>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/global.css" />
-    <style>
-      .container {
-        background-color: #f1f1f1;
-      }
-      .landing-view {
-        background-color: #f1f1f1;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/satoshi.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="landing-view">
+        <header>
+          <div class="container">
+            <h2 class="logo">
+              <a href="#" class="logo-link">payconnect.</a>
+            </h2>
+
+            <!-- nav -->
+            <nav id="nav">
+              <ul class="nav-links">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link">Pricing</a></li>
+                <li><a href="#" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+              </ul>
+
+              <ul class="nav-btns">
+                <a href="#" class="btn btn-white">Login</a>
+                <a href="#" class="btn btn-dark">Join</a>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <!-- banner section -->
+        <section class="banner">
+          <div class="container grid-container">
+            <div class="banner-grid-child">
+              <h1>Empowering Seamless Transactions for Everyone</h1>
+              <p>Manage payments, payroll, and loans effortlessly.</p>
+
+              <div class="ctas">
+                <a href="#" class="btn btn-dark">Create Account</a>
+                <a href="#" class="btn btn-white"
+                  >How it works <i class="fa fa-arrow"></i
+                ></a>
+              </div>
+            </div>
+            <div class="banner-grid-child"></div>
+          </div>
+        </section>
+      </div>
+      <!-- features section -->
+      <section class="features-section section-padding">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h1>Welcome to the Landing Page</h1>
+          <h2 class="section-header">What we Offer</h2>
+
+          <div class="features">
+            <div class="feature">
+              <div class="img-container">
+                <img src="./imgs/feature icons/easy_90px.png" alt="easy" />
+              </div>
+              <h3>Easy Payments</h3>
               <p>
-                This is a simple landing page example. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Eligendi nemo aspernatur
-                repellat, dignissimos iste debitis?
+                Send and receive money instantly across Cameroon with a simple
+                interface that works fast, safe, and stress-free—anytime.
+              </p>
+            </div>
+            <div class="feature gradient-bg">
+              <div class="img-container">
+                <img
+                  src="./imgs/feature icons/salary_female_90px.png"
+                  alt="salary"
+                />
+              </div>
+              <h3>Staff Salary Management</h3>
+              <p>
+                Employers can pay their staff directly from the platform, track
+                all payments, and generate records for accountability.
+              </p>
+            </div>
+            <div class="feature">
+              <div class="img-container">
+                <img src="./imgs/feature icons/loan100px.png" alt="loan" />
+              </div>
+              <h3>Peer-to-Peer Loans</h3>
+              <p>
+                Users can request or offer loans, with trust based on account
+                age, transaction history, and repayment behavior.
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>Welcome to the Landing Page</h1>
-          <p>
-            This is a simple landing page example. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Eligendi nemo aspernatur repellat,
-            dignissimos iste debitis?
-          </p>
+          <div class="features-banner">
+            <div class="img-container">
+              <img src="./imgs/feature icons/person2.png" alt="" />
+            </div>
+            <div class="content">
+              <h2>Take control of your payments</h2>
+
+              <ul>
+                <li>Manage all personal and business transactions easily.</li>
+                <li>Securely handle salaries, loans, and daily expenses.</li>
+
+                <li>Tailored for Africans' everyday financial needs.</li>
+              </ul>
+
+              <a href="#" class="btn btn-bordered">
+                Join us today
+                <img
+                  src="./imgs/feature icons/arrow-right.png"
+                  alt="arrow"
+                  class="arrow-right"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- testimonial -->
+      <section class="testimonial-section section-padding">
+        <div class="container">
+          <h1 class="section-header">Don't take our word for it</h1>
+          <div class="columns">
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p1.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Atem Melvis</h3>
+                  <p class="user-social">@RyanCarniato</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  Honestly, managing my money in Cameroon just got so much
+                  easier with this app. Sending and receiving payments is
+                  instant, and the interface is so clean and easy to understand.
+                  I feel more in control of my finances than ever before. Highly
+                  recommend!
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p2.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Hakeem</h3>
+                  <p class="user-social">@hakeem</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  Receiving payments and paying bills is seamless. A must-have
+                  for my business!"
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p3.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Tantoh Austin</h3>
+                  <p class="user-social">@brianaustin</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  From paying my bills to sending money to family, this app
+                  handles all my financial needs in one place. It's reliable,
+                  easy to use, and I trust it with my transactions.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p4.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Ndifor Carniato</h3>
+                  <p class="user-social">@ndifor</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  My go-to for all finances - payments, bills, everything in one
+                  simple app.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p5.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Tita Joe</h3>
+                  <p class="user-social">@RyanCarniato</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  From paying my bills to sending money to family, this app
+                  handles all my financial needs in one place. It's reliable,
+                  easy to use, and I trust it with my transactions.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p6.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Johnson solomon</h3>
+                  <p class="user-social">@johnson</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  I had some extra funds and wanted to make them work for me.
+                  The P2P lending option on the app is brilliant. I can offer
+                  small loans to other users based on their history within the
+                  platform.❤️
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p1.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Tony Ngeng</h3>
+                  <p class="user-social">@tony</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  My go-to for all finances - payments, bills, everything in one
+                  simple app."
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <div class="card_img_container">
+                  <img src="./imgs/profile image/p2.jpg" alt="" />
+                </div>
+                <div class="user-details">
+                  <h3 class="user-name">Adamu Rein</h3>
+                  <p class="user-social">@adamu</p>
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card_desc">
+                  Finally, a beautiful and easy-to-use financial app in Africa.
+                  So convenient 🤤🤯🙏
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- new letter -->
+      <section class="newsletter-section">
+        <div class="container">
+          <div class="newsletter">
+            <div class="content-left">
+              <h2>Subscribe to get updated</h2>
+              <p>
+                Get the latest financial tips, updates and smart money advice
+                right in your inbox. Stay informed, stay ahead.
+              </p>
+            </div>
+            <div class="content-right">
+              <a href="" class="btn btn-dark"
+                >Subscribe
+                <img src="./imgs/newletter imgs/paper_plane_48px.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>

@@ -1,0 +1,128 @@
+/* header */
+.landing-view {
+  /* min-height: 80vh; */
+  background: url("/imgs/bg/color1.jpg") no-repeat center/cover;
+  padding-top: 1rem;
+  mask: linear-gradient(black calc(100% - 4rem), transparent);
+}
+
+header .container {
+  padding: 0.5rem 0.85rem;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #0000000a;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(15px);
+}
+/* logo */
+.logo-link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+nav,
+nav > ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+/* nav */
+nav {
+  display: flex;
+  gap: 5rem;
+}
+
+.nav-links {
+  gap: 0.5rem;
+
+  /* nav link items */
+  .nav-link {
+    font-weight: 600;
+    padding: 0.35rem 0.5rem;
+    display: inline-block;
+    border-radius: 6px;
+    text-transform: capitalize;
+  }
+}
+
+/* nav top btns */
+.nav-btns {
+  gap: 1rem;
+  .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+.btn {
+  padding: 0.65rem 1rem;
+  display: inline-block;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  border-radius: 10px;
+  position: relative;
+  outline-offset: 1px;
+  transition: outline 0.15s ease;
+}
+
+.btn-white {
+  color: var(--color-text-dark);
+  background-color: var(--color-text-white);
+  &:hover {
+    outline: 2px solid var(--color-text-white);
+  }
+}
+.btn-dark {
+  color: var(--color-text-white);
+  background-color: var(--color-text-dark);
+  &:hover {
+    outline: 2px solid var(--color-text-dark);
+  }
+}
+
+/* banner */
+.banner {
+  /* border: 5px solid pink; */
+  min-height: 80vh;
+  padding: 6rem 0 4rem 0;
+}
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  > * {
+    /* outline: 2px solid green; */
+    height: 100%;
+  }
+}
+.banner-grid-child:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  h1 {
+    /* text-wrap: balance; */
+    font-size: var(--font-5xl);
+    font-weight: 600;
+    line-height: 1;
+  }
+  p {
+    font-size: var(--font-xl);
+  }
+}
+.ctas {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.btn:has(i, img) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
