@@ -3,11 +3,13 @@
   /* min-height: 80vh; */
   background: url("/imgs/bg/color1.jpg") no-repeat center/cover;
   padding-top: 1rem;
-  mask: linear-gradient(black calc(100% - 4rem), transparent);
+  /* mask: linear-gradient(black calc(100% - 4rem), transparent); */
 }
-
+/* header {
+} */
 header .container {
   padding: 0.5rem 0.85rem;
+  width: 100%;
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid #0000000a;
   border-radius: 18px;
@@ -61,6 +63,7 @@ nav {
 .btn {
   padding: 0.65rem 1rem;
   display: inline-block;
+  min-width: fit-content;
   font-weight: 600;
   font-size: var(--font-size-base);
   border-radius: 10px;
@@ -117,12 +120,53 @@ nav {
 }
 .ctas {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 1rem;
+  /* z-index: -1; */
 }
 .btn:has(i, img) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.bars {
+  display: none;
+}
+
+/* responsiveness */
+@media (width < 968px) {
+  .landing-view {
+    background: url("/imgs/bg/color1.jpg") no-repeat center/cover;
+    padding-top: 0rem;
+    mask: none;
+  }
+
+  .bars {
+    padding: 0.5rem 0.35rem;
+    /* background-color: #00000014; */
+    display: flex;
+    gap: 0.25rem;
+    cursor: pointer;
+    border-radius: 9px;
+    flex-direction: column;
+    .bar {
+      height: 5px;
+      border-radius: 15px;
+      width: 35px;
+      background: var(--color-text-dark);
+    }
+  }
+
+  nav {
+    position: fixed;
+    height: 100vh;
+    background-color: #000;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    z-index: 9999 !important;
+    /* display: none; */
+  }
 }
