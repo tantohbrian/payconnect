@@ -31,5 +31,30 @@
 
   --line-height-base: 1.6;
   --line-height-tight: 1.2;
-  
+}
+
+/* custom  styles */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 1rem;
+}
+
+/* TEXT */
+.text-heading {
+  font-size: var(--font-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-color);
+}
+
+.text-subheading {
+  font-size: var(--font-xl);
+  font-weight: var(--font-medium);
+  color: var(--subtle-text);
+}
+
+.text-paragraph {
+  font-size: var(--font-base);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
 }
