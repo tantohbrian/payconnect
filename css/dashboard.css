@@ -513,6 +513,12 @@ tr:hover {
   .amount {
     font-size: 1rem !important;
   }
+  .transaction-history {
+    overflow-x: scroll;
+  }
+  .greeting {
+    font-size: 0.9rem;
+  }
 }
 
 @media (width < 798px) {
