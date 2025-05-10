@@ -9,21 +9,20 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-  
   </head>
   <body>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form id="myForm" action="GET" class="sign-in-form">
+          <form id="myFormLog" class="sign-in-form">
             <h2 class="title">Sign In</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" required />
             </div>
             <input type="submit" value="Login" class="btn solid" />
 
@@ -44,32 +43,36 @@
             </div>
           </form>
 
-
-          <form id="myForm" action="POST" class="sign-up-form">
+          <form id="myForm" class="sign-up-form">
             <h2 class="title">Sign Up</h2>
-             <div class="input-field">
+            <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Full Names" />
+              <input type="text" placeholder="Full Names" required />
             </div>
-            
 
             <div class="input-field">
-            <i class="fas fa-user">DOB</i>
-            <input type="date" id="dob" name="dob" placeholder="Date of Birth" required>
+              <i class="fas fa-user">DOB</i>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                placeholder="Date of Birth"
+                required
+              />
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Email" />
+              <input type="text" placeholder="Email" required />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Mobile Number" />
+              <input type="email" placeholder="Mobile Number" required />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" required />
             </div>
-     
+
             <input type="submit" value="Sign Up" class="btn solid" />
 
             <p class="social-text">Or Sign up with social platforms</p>
@@ -91,23 +94,22 @@
         </div>
       </div>
       <div class="panels-container">
-
         <div class="panel left-panel">
-            <div class="content">
-                <h3>New here?</h3>
-                <p>Create Account one time for start enjoy wah service dem </p>
-                <button class="btn transparent" id="sign-up-btn">Sign Up</button>
-            </div>
-            <img src="./img/log.svg" class="image" alt="">
+          <div class="content">
+            <h3>New here?</h3>
+            <p>Create Account one time for start enjoy wah service dem</p>
+            <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+          </div>
+          <img src="./img/log.svg" class="image" alt="" />
         </div>
 
         <div class="panel right-panel">
-            <div class="content">
-                <h3>One of us?</h3>
-                <p>You be na Correct Man</p>
-                <button class="btn transparent" id="sign-in-btn">Sign In</button>
-            </div>
-            <img src="./img/register.svg" class="image" alt="">
+          <div class="content">
+            <h3>One of us?</h3>
+            <p>You be na Correct Man</p>
+            <button class="btn transparent" id="sign-in-btn">Sign In</button>
+          </div>
+          <img src="./img/register.svg" class="image" alt="" />
         </div>
       </div>
     </div>
@@ -115,20 +117,39 @@
     <script src="./app.js"></script>
 
     <script>
-  // Example simple validation on form submit
-  // (Assuming your form has id="myForm")
-  
-  document.getElementById('myForm').addEventListener('submit', function(e) {
-    const gender = document.getElementById('gender');
-    const error = document.getElementById('genderError');
-    if (!gender.value) {
-      error.style.display = 'block';
-      e.preventDefault();
-    } else {
-      error.style.display = 'none';
-    }
-  });
-</script>
+      // Example simple validation on form submit
+      // (Assuming your form has id="myForm")
 
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          const gender = document.getElementById("gender");
+          const error = document.getElementById("genderError");
+          if (!gender.value) {
+            error.style.display = "block";
+            e.preventDefault();
+          } else {
+            error.style.display = "none";
+          }
+        });
+
+      const form = document.querySelector("#myFormLog");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        window.location.href = "dashboard.html";
+      });
+
+      const sign = document.querySelector("#sign-in-btn");
+      sign.addEventListener("click", () => {
+        console.log("hello");
+      });
+
+      const signup = document.querySelector("#myForm");
+
+      signup.addEventListener("submit", (e) => {
+        e.preventDefault();
+        window.location.href = "dashboard.html";
+      });
+    </script>
   </body>
 </html>

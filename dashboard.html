@@ -84,7 +84,7 @@
                 </li>
 
                 <li>
-                  <a href="#"
+                  <a href="signUp.html"
                     ><img src="imgs/dashboard/Logout Rounded_32px.png" alt="" />
                     log out</a
                   >
@@ -95,7 +95,7 @@
         </aside>
         <main class="dashboard">
           <div class="header">
-            <h2 class="greeting">☀️ Good Morning, Mr. Nkenfack!</h2>
+            <h2 class="greeting">☀️ Good Afternoon, Mr. Nkenfack!</h2>
           </div>
           <div class="dashboard-content">
             <div class="title">
@@ -107,6 +107,7 @@
               <div class="buttons">
                 <button
                   class="btn btn-dark"
+                  id="#payBtn"
                   type="button"
                   data-modal-target="#make-payment-modal"
                 >
@@ -261,7 +262,7 @@
             <!-- modal -->
             <div id="overlay"></div>
             <div class="modal active" id="make-payment-modal">
-              <form action="">
+              <form action="" class="makepayment-form" id="payment-form">
                 <h3>Make a payment</h3>
                 <button type="button" class="close-button" data-close-button>
                   <img
@@ -271,75 +272,70 @@
                   />
                 </button>
 
-                <form action="">
+                <div class="form-group">
+                  <label>Select country</label>
+                  <select name="" id="select">
+                    <option value="Cameroon"></option>
+                  </select>
+                </div>
+                <div class="form-group-group">
                   <div class="form-group">
-                    <label>Select country</label>
-                    <select name="" id="select">
-                      <option value="Cameroon"></option>
-                    </select>
-                  </div>
-                  <div class="form-group-group">
-                    <div class="form-group">
-                      <label>Username</label>
-                      <input
-                        type="text"
-                        name="username"
-                        placeholder="Tita silas"
-                        class="username"
-                        required
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label>Number</label>
-                      <input
-                        type="number"
-                        name="number"
-                        placeholder="6712345678"
-                        class="number"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Amount</label>
+                    <label>Username</label>
                     <input
                       type="text"
-                      name="amount"
-                      placeholder="XAF 000000"
-                      class="amount"
+                      name="username"
+                      placeholder="Tita silas"
+                      class="username"
                       required
                     />
                   </div>
                   <div class="form-group">
-                    <label>Reason for transfer</label>
+                    <label>Number</label>
                     <input
-                      type="text"
-                      name="reason"
-                      placeholder="for accessories!"
-                      class="reference"
+                      type="number"
+                      name="number"
+                      placeholder="6712345678"
+                      class="number"
                       required
                     />
                   </div>
+                </div>
+                <div class="form-group">
+                  <label>Amount</label>
+                  <input
+                    type="text"
+                    name="amount"
+                    placeholder="XAF 000000"
+                    class="amount"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Reason for transfer</label>
+                  <input
+                    type="text"
+                    name="reason"
+                    placeholder="for accessories!"
+                    class="reference"
+                    required
+                  />
+                </div>
 
-                  <div class="buttons">
-                    <button class="btn btn-primary">
-                      Proceed with payment
-                      <img
-                        src="/imgs/dashboard/forward_arrow_50px.png"
-                        alt=""
-                      />
-                    </button>
-                    <button type="reset" class="btn btn-cancel" id="cancel-btn">
-                      Cancel payment
-                    </button>
-                  </div>
-                </form>
+                <div class="buttons">
+                  <button class="btn btn-primary">
+                    Proceed with payment
+                    <img src="/imgs/dashboard/forward_arrow_50px.png" alt="" />
+                  </button>
+                  <button type="reset" class="btn btn-cancel" id="cancel-btn">
+                    Cancel payment
+                  </button>
+                </div>
               </form>
             </div>
 
             <!-- topup popup -->
             <div class="modal active" id="topup-modal">
-              <form action="" class="makepayment-form">
+              <form action="" id="topup-form">
                 <h3>Top up your account</h3>
                 <button type="button" class="close-button" data-close-button>
                   <img
@@ -349,38 +345,36 @@
                   />
                 </button>
 
-                <form action="">
-                  <div class="form-group">
-                    <label>Amount</label>
-                    <input
-                      type="number"
-                      name="amount"
-                      placeholder="XAF 000000"
-                      class="amount"
-                      pattern="[0-9]*"
-                      inputmode="numeric"
-                      required
-                    />
-                  </div>
+                <div class="form-group">
+                  <label>Amount</label>
+                  <input
+                    type="number"
+                    name="amount"
+                    placeholder="XAF 000000"
+                    class="amount"
+                    pattern="[0-9]*"
+                    inputmode="numeric"
+                    required
+                  />
+                </div>
 
-                  <div class="buttons">
-                    <button class="btn btn-dark">
-                      Continue with Nkwa Pay
-                      <img
-                        src="/imgs/dashboard/download.jpeg"
-                        alt="nkwa logo"
-                        class="nkwa-logo"
-                      />
-                    </button>
-                    <!-- <button
+                <div class="buttons">
+                  <button class="btn btn-dark">
+                    Continue with Nkwa Pay
+                    <img
+                      src="/imgs/dashboard/download.jpeg"
+                      alt="nkwa logo"
+                      class="nkwa-logo"
+                    />
+                  </button>
+                  <!-- <button
                       type="button"
                       class="btn btn-cancel"
                       id="cancel-btn"
                     >
                       Cancel payment
                     </button> -->
-                  </div>
-                </form>
+                </div>
               </form>
             </div>
 
@@ -505,5 +499,76 @@
         </main>
       </div>
     </div>
+
+    <script>
+      const form = document.getElementById("payment-form");
+      const form2 = document.getElementById("topup-form");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const numberInput = form.querySelector(".number").value.trim();
+        const amountInput = parseInt(
+          form.querySelector(".amount").value.trim()
+        );
+        const fullPhoneNumber = `237${numberInput}`;
+
+        const options = {
+          method: "POST",
+          headers: {
+            "X-API-Key": "qTeIlYfN0G_p8rm8HsYql",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: amountInput,
+            phoneNumber: fullPhoneNumber,
+          }),
+        };
+
+        fetch("https://api.pay.mynkwa.com/collect", options)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Payment initiated:", data);
+            alert("Payment request sent successfully!");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("Payment failed. Check console for more info.");
+          });
+      });
+
+
+        e.preventDefault();
+
+        const numberInput = form.querySelector(".number").value.trim();
+        const amountInput = parseInt(
+          form.querySelector(".amount").value.trim()
+        );
+        const fullPhoneNumber = `237${numberInput}`;
+
+        const options = {
+          method: "POST",
+          headers: {
+            "X-API-Key": "qTeIlYfN0G_p8rm8HsYql",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: amountInput,
+            phoneNumber: fullPhoneNumber,
+          }),
+        };
+
+        fetch("https://api.pay.mynkwa.com/collect", options)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Payment initiated:", data);
+            alert("Payment request sent successfully!");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("Payment failed. Check console for more info.");
+          });
+      });
+    </script>
   </body>
 </html>
