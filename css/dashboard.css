@@ -110,7 +110,7 @@ ul.sidebar-list li a {
   padding: 1.5rem;
   .buttons {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     align-items: center;
     justify-content: space-between;
 
@@ -282,7 +282,7 @@ ul.sidebar-list li a {
   .buttons {
     display: flex;
     margin-top: 1rem;
-    gap: 1rem;
+    gap: 0.5rem;
   }
   button {
     width: fit-content !important;
@@ -296,6 +296,7 @@ ul.sidebar-list li a {
   .btn-cancel {
     background-color: #eaeaea;
     font-weight: 600;
+    display: none;
   }
   .btn-cancel:hover {
     background-color: #dbdbdb;
@@ -451,7 +452,6 @@ tr:hover {
 
 /* responsiveness */
 @media (max-width: 1200px) {
-
   .grid {
     display: flex;
     flex-direction: column;
