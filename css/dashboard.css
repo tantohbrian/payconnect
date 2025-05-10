@@ -447,3 +447,28 @@ tr:hover {
   background-color: #f3f3f3e9;
   backdrop-filter: blur(15px);
 }
+
+/* responsiveness */
+@media (max-width: 1200px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1000px auto; */
+    /* gap: 1rem; */
+  }
+
+  aside {
+    height: 100vh;
+    z-index: 999;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    border-right: 1px solid #0000001b;
+    background: var(--bg-grey-light);
+    background: #fff;
+    background-attachment: fixed;
+    backdrop-filter: blur(15px);
+    min-width: 30%;
+    left: -100%;
+  }
+}
