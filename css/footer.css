@@ -7,6 +7,7 @@ footer {
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 2rem;
   .footer-group {
     display: flex;
     flex-direction: column;
@@ -38,4 +39,3 @@ footer {
     }
   }
 }
-

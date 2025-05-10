@@ -152,7 +152,7 @@ nav {
     background: url("../imgs/bg/color1.jpg") no-repeat center/cover;
     padding-top: 0rem;
     mask: none;
-    height: 100vh;
+    min-height: 100vh;
   }
   header {
     position: fixed;
@@ -208,6 +208,9 @@ nav {
     }
     .btn-dark {
       background-color: #000;
+    }
+    .nav-link:hover {
+      color: white !important;
     }
   }
   nav.active {

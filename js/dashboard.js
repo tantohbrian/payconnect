@@ -42,7 +42,6 @@ cancelBtn.addEventListener("click", () => {
 
 // form validation
 
-
 // !page loader
 const loader = document.querySelector(".page-loader");
 
@@ -58,10 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       loader.style.opacity = "0";
       loader.style.pointerEvents = "none";
-      setTimeout(() => loader.remove(), 300); // optional fade-out
+      setTimeout(() => loader.remove(), 300);
     }, delay);
   });
 });
 
-
-// active link 
+// active link
