@@ -111,7 +111,7 @@
                   type="button"
                   data-modal-target="#make-payment-modal"
                 >
-                  Make payment
+                  Top up Account
                   <img src="imgs/dashboard/makepay.png" alt="" />
                 </button>
                 <button
@@ -119,7 +119,7 @@
                   class="btn btn-white"
                   data-modal-target="#topup-modal"
                 >
-                  Top up Account
+                  Make a Payment
 
                   <img src="imgs/dashboard/topup.png" alt="" />
                 </button>
@@ -335,7 +335,7 @@
 
             <!-- topup popup -->
             <div class="modal active" id="topup-modal">
-              <form action="" id="topup-form">
+              <form action="">
                 <h3>Top up your account</h3>
                 <button type="button" class="close-button" data-close-button>
                   <img
@@ -345,36 +345,38 @@
                   />
                 </button>
 
-                <div class="form-group">
-                  <label>Amount</label>
-                  <input
-                    type="number"
-                    name="amount"
-                    placeholder="XAF 000000"
-                    class="amount"
-                    pattern="[0-9]*"
-                    inputmode="numeric"
-                    required
-                  />
-                </div>
-
-                <div class="buttons">
-                  <button class="btn btn-dark">
-                    Continue with Nkwa Pay
-                    <img
-                      src="/imgs/dashboard/download.jpeg"
-                      alt="nkwa logo"
-                      class="nkwa-logo"
+                <form action="">
+                  <div class="form-group">
+                    <label>Amount</label>
+                    <input
+                      type="number"
+                      name="amount"
+                      placeholder="XAF 000000"
+                      class="amount"
+                      pattern="[0-9]*"
+                      inputmode="numeric"
+                      required
                     />
-                  </button>
-                  <!-- <button
+                  </div>
+
+                  <div class="buttons">
+                    <button class="btn btn-dark">
+                      Continue with Nkwa Pay
+                      <img
+                        src="/imgs/dashboard/download.jpeg"
+                        alt="nkwa logo"
+                        class="nkwa-logo"
+                      />
+                    </button>
+                    <!-- <button
                       type="button"
                       class="btn btn-cancel"
                       id="cancel-btn"
                     >
                       Cancel payment
                     </button> -->
-                </div>
+                  </div>
+                </form>
               </form>
             </div>
 
@@ -502,42 +504,8 @@
 
     <script>
       const form = document.getElementById("payment-form");
-      const form2 = document.getElementById("topup-form");
 
       form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const numberInput = form.querySelector(".number").value.trim();
-        const amountInput = parseInt(
-          form.querySelector(".amount").value.trim()
-        );
-        const fullPhoneNumber = `237${numberInput}`;
-
-        const options = {
-          method: "POST",
-          headers: {
-            "X-API-Key": "qTeIlYfN0G_p8rm8HsYql",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            amount: amountInput,
-            phoneNumber: fullPhoneNumber,
-          }),
-        };
-
-        fetch("https://api.pay.mynkwa.com/collect", options)
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Payment initiated:", data);
-            alert("Payment request sent successfully!");
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            alert("Payment failed. Check console for more info.");
-          });
-      });
-
-
         e.preventDefault();
 
         const numberInput = form.querySelector(".number").value.trim();
