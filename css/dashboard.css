@@ -128,12 +128,12 @@ ul.sidebar-list li a {
 /* grid cards */
 .grid-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1rem;
 }
 
 .grid-card {
-  display: flex;
+  display: block;
   flex-direction: column;
   background-color: var(--bg-grey-light);
   border-radius: 8px;
@@ -395,6 +395,7 @@ table {
   border-radius: 8px;
   border: 1px solid #00000015;
   border-collapse: collapse;
+  /* overflow-x: auto; */
 }
 
 th {
@@ -451,12 +452,19 @@ tr:hover {
 /* responsiveness */
 @media (max-width: 1200px) {
   .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* grid-template-rows: 1000px auto; */
-    /* gap: 1rem; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid red; */
   }
 
+  .modal button {
+    font-size: 0.9rem !important;
+    /* border: 2px solid red; */
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
   aside {
     height: 100vh;
     z-index: 999;
@@ -470,5 +478,78 @@ tr:hover {
     backdrop-filter: blur(15px);
     min-width: 30%;
     left: -100%;
+  }
+  .grid-cards-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .grid-card {
+      display: flex;
+      flex-direction: column;
+      background-color: #fdfdfd78;
+      backdrop-filter: blur(25px);
+      border: 1px solid #00000015;
+
+      .card-header {
+        border: none;
+      }
+    }
+    .amount {
+      padding: 1rem 0 1rem 1rem;
+    }
+    .main-balance {
+      font-weight: 900;
+      /* color: var(--primary); */
+    }
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .amount {
+    font-size: 1rem !important;
+  }
+}
+
+@media (width < 798px) {
+  .grid-cards-three {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .grid-card {
+      display: flex;
+      flex-direction: column;
+      background-color: #fdfdfd78;
+      backdrop-filter: blur(25px);
+      border: 1px solid #00000015;
+
+      .card-header {
+        border: none;
+      }
+    }
+    .amount {
+      padding: 1rem 0 1rem 1rem;
+    }
+    .main-balance {
+      font-weight: 900;
+      /* color: var(--primary); */
+    }
+  }
+
+  .grid-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-grey-light);
+    border-radius: 8px;
+    border: 1px solid #00000015;
+    /* background-color: red; */
   }
 }
