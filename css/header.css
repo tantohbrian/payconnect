@@ -1,7 +1,7 @@
 /* header */
 .landing-view {
   height: 100%;
-  background: url("/imgs/bg/color1.jpg") no-repeat center/cover;
+  background: url("../imgs/bg/color1.jpg") no-repeat center/cover;
   padding-top: 1rem;
   mask: linear-gradient(black calc(100% - 4rem), transparent);
 }
@@ -149,7 +149,7 @@ nav {
 /* responsiveness */
 @media (width < 968px) {
   .landing-view {
-    background: url("/imgs/bg/color1.jpg") no-repeat center/cover;
+    background: url("../imgs/bg/color1.jpg") no-repeat center/cover;
     padding-top: 0rem;
     mask: none;
     height: 100vh;

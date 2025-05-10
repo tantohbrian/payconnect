@@ -282,7 +282,7 @@
         rgba(255, 255, 255, 0.318),
         rgba(255, 255, 255, 0.63)
       ),
-      url("/imgs/bg/color2.jpg") no-repeat center/cover;
+      url("../imgs/bg/color2.jpg") no-repeat center/cover;
     background-attachment: fixed;
     border: 1px solid #00000018;
 

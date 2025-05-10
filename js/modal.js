@@ -34,3 +34,10 @@ function closeModal(modal) {
   modal.classList.remove("active");
   overlay.classList.remove("active");
 }
+window.addEventListener("load", () => {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach((modal) => {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
