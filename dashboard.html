@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="js/modal.js" defer></script>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/satoshi.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/dialog.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="grid">
+        <aside class="sidebar">
+          <div class="header">
+            <h2 class="logo"><a href="#" class="logo-link">payconnect</a></h2>
+          </div>
+
+          <section class="sidebar-items">
+            <div class="sidebar-group">
+              <h2 class="group-header">User module</h2>
+              <ul class="sidebar-list">
+                <li>
+                  <a href="#"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-wallet"></i> Payments</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-message"></i> User message</a>
+                </li>
+
+                <li>
+                  <a href="#"><i class="fa fa-bell"></i> Notifications</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-group">
+              <h2 class="group-header">Tools</h2>
+              <ul class="sidebar-list">
+                <li>
+                  <a href="#"><i class="fa fa-cog"></i> Settings</a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-headphones"></i> Chat and support</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-faq"></i> Help center</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </aside>
+        <main class="dashboard">
+          <div class="header">
+            <h2 class="greeting">☀️ Good Morning, Mr. Nkenfack!</h2>
+          </div>
+          <div class="dashboard-content">
+            <div class="title">
+              <div>
+                <h2>Dashboard</h2>
+                <p>Overview of you transaction history</p>
+              </div>
+
+              <button
+                class="btn btn-dark"
+                type="button"
+                class="btn btn-dark"
+                data-modal-target="#make-payment-modal"
+              >
+                Make payment
+              </button>
+            </div>
+
+            <!-- user data -->
+            <div class="grid-cards-three">
+              <div class="grid-card">
+                <!-- card header -->
+                <div class="card-header">
+                  <div class="img-container">
+                    <img src="/imgs/dashboard/wallet.png" alt="" />
+                  </div>
+                  <h3>Wallet Balance</h3>
+                </div>
+                <h2 class="amount main-balance">XAF 578,000</h2>
+              </div>
+              <div class="grid-card">
+                <!-- card header -->
+                <div class="card-header">
+                  <div class="img-container">
+                    <img src="/imgs/dashboard/calendar_minus_48px.png" alt="" />
+                  </div>
+                  <h3>Merchant Loan Balance</h3>
+                </div>
+                <h2 class="amount">XAF 110,000</h2>
+              </div>
+              <div class="grid-card">
+                <!-- card header -->
+                <div class="card-header">
+                  <div class="img-container">
+                    <img src="/imgs/dashboard/order_history_50px.png" alt="" />
+                  </div>
+                  <h3>Completed Payment</h3>
+                </div>
+                <h2 class="amount">XAF 578000</h2>
+              </div>
+            </div>
+
+            <!-- payments -->
+            <div class="grid-cards">
+              <div class="grid-card">
+                <!-- card header -->
+                <div class="card-header">
+                  <div class="img-container">
+                    <img src="/imgs/dashboard/calendar_minus_48px.png" alt="" />
+                  </div>
+                  <div class="card-header-details">
+                    <div class="left">
+                      <h3>Total Payment</h3>
+                      <h2>579</h2>
+                    </div>
+                    <div class="right">
+                      <div class="chart">+15%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details">
+                  <a href="#" class="details-btn"
+                    >See details <i class="fa fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="grid-card">
+                <!-- card header -->
+                <div class="card-header">
+                  <div class="img-container">
+                    <img src="/imgs/dashboard/calendar_minus_48px.png" alt="" />
+                  </div>
+                  <div class="card-header-details">
+                    <div class="left">
+                      <h3>Completed Payment</h3>
+                      <h2>579</h2>
+                    </div>
+                    <div class="right">
+                      <div class="chart">+15%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details">
+                  <a href="#" class="details-btn"
+                    >See details <i class="fa fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="grid-card">
+                <!-- card header -->
+                <div class="card-header">
+                  <div class="img-container">
+                    <img src="/imgs/dashboard/calendar_minus_48px.png" alt="" />
+                  </div>
+                  <div class="card-header-details">
+                    <div class="left">
+                      <h3>Failed Payment</h3>
+                      <h2>579</h2>
+                    </div>
+                    <div class="right">
+                      <div class="chart">+15%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details">
+                  <a href="#" class="details-btn"
+                    >See details <i class="fa fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="grid-card">
+                <!-- card header -->
+                <div class="card-header">
+                  <div class="img-container">
+                    <img src="/imgs/dashboard/calendar_minus_48px.png" alt="" />
+                  </div>
+                  <div class="card-header-details">
+                    <div class="left">
+                      <h3>Payment Record</h3>
+                      <h2>579</h2>
+                    </div>
+                    <div class="right">
+                      <div class="chart">+15%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="details">
+                  <a href="#" class="details-btn"
+                    >See details <i class="fa fa-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- payment popup -->
+            <!-- modal -->
+            <div id="overlay"></div>
+            <div class="modal active" id="make-payment-modal">
+              <form action="">
+                <h3>Make a payment</h3>
+                <button type="button" class="close-button" data-close-button>
+                  <img
+                    src="imgs/newletter-imgs/close_window_24px.png"
+                    alt=""
+                    class="close-btn"
+                  />
+                </button>
+
+                <form action="">
+                  <div class="form-group-group">
+                    <div class="form-group">
+                      <label>Username</label>
+                      <input type="text" name="username" />
+                    </div>
+                    <div class="form-group">
+                      <label>Number</label>
+                      <input type="number" name="number" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>Amount</label>
+                    <input type="text" name="amount" />
+                  </div>
+                  <div class="form-group">
+                    <label>Reason for transfer</label>
+                    <input type="text" />
+                  </div>
+
+                  <button class="btn btn-primary">Proceed with payment</button>
+                </form>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

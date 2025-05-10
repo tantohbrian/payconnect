@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payconnect</title>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/modal.js" defer></script>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/dialog.css" />
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/satoshi.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="landing-view">
+        <header>
+          <div class="container">
+            <h2 class="logo">
+              <a href="index.html" class="logo-link">payconnect.</a>
+            </h2>
+
+            <!-- nav -->
+            <nav id="nav">
+              <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#" class="nav-link active">About Us</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+              </ul>
+
+              <ul class="nav-btns">
+                <a href="#" class="btn btn-white">Login</a>
+                <a href="#" class="btn btn-dark">Join</a>
+              </ul>
+            </nav>
+
+            <div class="bars" id="bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </header>
+
+        <!-- banner section -->
+        <section class="banner">
+          <div class="container grid-container">
+            <div class="banner-grid-child">
+              <h1>Who are we?</h1>
+              <p>
+                Get to know the creative minds behind payconnect and discover
+                our commitment to pushing boundaries and delivering exceptional
+                payment solutions.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- new letter -->
+      <section class="newsletter-section">
+        <div class="container">
+          <div class="newsletter">
+            <div class="content-left">
+              <h2>Subscribe to get updated</h2>
+              <p>
+                Get the latest financial tips, updates and smart money advice
+                right in your inbox. Stay informed, stay ahead.
+              </p>
+            </div>
+            <div class="content-right">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-modal-target="#modal"
+              >
+                Subscribe
+                <img src="./imgs/newletter-imgs/paper_plane_48px.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- modal -->
+      <div id="overlay"></div>
+      <div class="modal" id="modal">
+        <form action="">
+          <h3>Sign up to receive updates and tips</h3>
+          <button type="button" class="close-button" data-close-button>
+            <img
+              src="imgs/newletter-imgs/close_window_24px.png"
+              alt=""
+              class="close-btn"
+            />
+          </button>
+          <div class="group">
+            <input
+              type="email"
+              placeholder="enter email"
+              name="email"
+              required
+            />
+            <button class="btn btn-dark">submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- footer section -->
+      <footer>
+        <div class="container">
+          <!-- <h1 class="section-header">Footer</h1> -->
+          <div class="footer-content">
+            <div class="footer-group">
+              <h3><a href="index.html" class="logo-link">payconnect.</a></h3>
+              <p>
+                Empowering better money habits through smart, secure and simple
+                financial tools
+              </p>
+
+              <div class="socials">
+                <ul class="social-links">
+                  <li>
+                    <a href="" class="social-link"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="" class="social-link"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="" class="social-link"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-group">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#">Our Agents</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Documentation</a></li>
+              </ul>
+            </div>
+            <div class="footer-group">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms of use</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

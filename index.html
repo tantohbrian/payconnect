@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payconnect</title>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/modal.js" defer></script>
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -15,11 +17,12 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="./css/dialog.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/satoshi.css" />
-    <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/header.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -27,17 +30,17 @@
         <header>
           <div class="container">
             <h2 class="logo">
-              <a href="#" class="logo-link">payconnect.</a>
+              <a href="index.html" class="logo-link">payconnect.</a>
             </h2>
 
             <!-- nav -->
             <nav id="nav">
               <ul class="nav-links">
-                <li><a href="#" class="nav-link">Home</a></li>
-                <li><a href="#" class="nav-link">Features</a></li>
-                <li><a href="#" class="nav-link">Pricing</a></li>
-                <li><a href="#" class="nav-link">About Us</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <!-- <li><a href="#" class="nav-link">Pricing</a></li> -->
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
               </ul>
 
               <ul class="nav-btns">
@@ -46,7 +49,7 @@
               </ul>
             </nav>
 
-            <div class="bars">
+            <div class="bars" id="bars">
               <div class="bar"></div>
               <div class="bar"></div>
               <div class="bar"></div>
@@ -64,7 +67,7 @@
               <div class="ctas">
                 <a href="#" class="btn btn-dark">Create Account</a>
                 <a href="#" class="btn btn-white"
-                  >How it works <i class="fa fa-arrow"></i
+                  >How it works <i class="fa fa-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -73,7 +76,7 @@
         </section>
       </div>
       <!-- features section -->
-      <section class="features-section section-padding">
+      <section class="features-section section-padding" id="features">
         <div class="container">
           <h2 class="section-header">What we Offer</h2>
 
@@ -307,14 +310,43 @@
               </p>
             </div>
             <div class="content-right">
-              <a href="" class="btn btn-dark"
-                >Subscribe
-                <img src="./imgs/newletter imgs/paper_plane_48px.png" alt="" />
-              </a>
+              <button
+                type="button"
+                href="#"
+                class="btn btn-dark"
+                data-modal-target="#modal"
+              >
+                Subscribe
+                <img src="./imgs/newletter-imgs/paper_plane_48px.png" alt="" />
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- modal -->
+      <div id="overlay"></div>
+      <div class="modal" id="modal">
+        <form action="">
+          <h3>Sign up to receive updates and tips</h3>
+          <button type="button" class="close-button" data-close-button>
+            <img
+              src="imgs/newletter-imgs/close_window_24px.png"
+              alt=""
+              class="close-btn"
+            />
+          </button>
+          <div class="group">
+            <input
+              type="email"
+              placeholder="enter email"
+              name="email"
+              required
+            />
+            <button class="btn btn-dark">submit</button>
+          </div>
+        </form>
+      </div>
 
       <!-- footer section -->
       <footer>
